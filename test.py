@@ -1,6 +1,8 @@
 from pyneuphonic import Neuphonic, WebsocketEvents
 from pyneuphonic.player import AsyncAudioPlayer, AsyncAudioRecorder
 from pyneuphonic.models import APIResponse, AgentResponse, AgentConfig
+import torch
+from transformers import LlamaForCausalLM, LlamaTokenizer
 
 import os
 import asyncio
@@ -43,3 +45,15 @@ async def main():
 
 
 asyncio.run(main())
+
+# Load tokenizer and model
+tokenizer = LlamaTokenizer.from_pretrained("path_to_weights")
+model = LlamaForCausalLM.from_pretrained("path_to_weights")
+
+# Tokenize input
+input_text = "What is the capital of France?"
+inputs = tokenizer(input_text, return_tensors="pt")
+
+# Generate output
+outputs = model.generate(inputs["input_ids"], max_length=50)
+print(tokenizer.decode(outputs[0]))
