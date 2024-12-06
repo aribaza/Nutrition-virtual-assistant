@@ -133,7 +133,7 @@ python neuphonic_texttospeech.py
 
 
 ### Speech-To-Speech (STS)
-   *** NOTE: The ASR is quite sensitive, so you might need to be in a quiet area (and using headphones) to make this work fluidly.
+   *** NOTE: The speech recognition is quite sensitive, so you might need to be in a quiet area (and using headphones) to make this work fluidly, otherwise it can pick up background noise.
 
 We've also created a file called neuphonic_speech_to_speech.py which allows you to talk to a module in a speech to speech fashion. It's connected to a Deepgram ASR, OpenAI LLM, and then the Neuphonic TTS. By installing pyneuphonic, you install all the depencies required to get it up and running.
 
