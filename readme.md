@@ -66,7 +66,17 @@ In what follows, we'll show you how to get started and use our software!
 
 You will need to be running a minimum of Python 3.10+ 
 
-You'll also need to get an API Key, which you can get from beta.neuphonic.com.
+You'll also need to get an API Key, which you can get from [beta.neuphonic.com](beta.neuphonic.com).
+
+
+### MacOS
+
+If you're on MacOS, install `brew` at [https://brew.sh/](https://brew.sh/) if you don't have it already.
+
+In most cases, you will be playing the audio returned from our servers directly on your device.
+
+> :warning: Mac users encountering a `'portaudio.h' file not found` error can resolve it by running
+> `brew install portaudio`.
 
 ### Installation
 
@@ -88,7 +98,7 @@ pip install -r requirements.txt
 
 ### Project Structure
 ```bash
-├── hackathon_demo_ucl.py           # JupyterNotebook going over various helpful examples
+├── hackathon_demo_ucl.ipynb        # JupyterNotebook going over various helpful examples
 ├── neuphonic_texttospeech.py       # TTS module
 ├── neuphonic_speech_to_speech.py   # Main integration program
 ├── README.md                       # Documentation
@@ -97,6 +107,10 @@ pip install -r requirements.txt
 ```
 
 ---
+
+## Getting started
+
+Try out the ipython notebook `hackathon_demo_ucl.ipynb` in your IDE!
 
 ## Code Overview
 
