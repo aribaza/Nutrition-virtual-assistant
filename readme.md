@@ -112,6 +112,9 @@ pip install -r requirements.txt
 
 Try out the ipython notebook `hackathon_demo_ucl.ipynb` in your IDE!
 
+For more detailed documentation and examples, please refer to the `pyneuphonic` SDK README available 
+at [pyneuphonic GitHub repository](https://github.com/neuphonic/pyneuphonic).
+
 ## Code Overview
 
 ### Text-to-Speech (TTS)
