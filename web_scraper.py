@@ -31,22 +31,26 @@ def scrape_nutritional_info(item):
         
         time.sleep(2) 
         driver.refresh()
+        driver.execute_script("window.scrollBy(0, 500);")
         
         # Wait for the search results to load and click the first search result
-        WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located(
-                (By.CSS_SELECTOR, "div.styled__StyledVerticalTile-sc-1r1v9f3-1.LihIl:first-of-type")
-            )
+        # Get the link URL using JavaScript
+        link_url = driver.execute_script(
+            "return document.querySelector('h3:first-of-type > a').href;"
         )
-
-        # Refresh the page after the search and click
-        first_result = driver.find_element(By.CSS_SELECTOR, "div.styled__StyledVerticalTile-sc-1r1v9f3-1.LihIl:first-of-type")
-        first_result.click()
+        
+        driver.get(link_url)
 
         time.sleep(2) 
         driver.refresh()
+        driver.execute_script("window.scrollBy(0, 500);")
 
         # Extract nutritional information (type and percentage)
+        WebDriverWait(driver, 1000).until(
+            EC.presence_of_element_located(
+                (By.CSS_SELECTOR, "div.styled__Item-sc-1qnv8z6-1.OGJz")
+            )
+        )
         nutritional_items = driver.find_elements(By.CSS_SELECTOR, "div.styled__Item-sc-1qnv8z6-1.OGJz")
         
         for item in nutritional_items:
@@ -64,4 +68,4 @@ def scrape_nutritional_info(item):
         driver.quit()
 
 # Example usage
-scrape_nutritional_info("Jaffa cakes")
+scrape_nutritional_info("Domio Bolognese")
