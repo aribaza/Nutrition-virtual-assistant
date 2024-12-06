@@ -83,7 +83,7 @@ In most cases, you will be playing the audio returned from our servers directly 
 Clone the repository:  
 ```bash
 git clone https://github.com/neuphonic/ucl_hackathon.git
-cd UCL_hackathon
+cd UCL-Hackathon
 ```
 
 Create a virtual environment and install the dependencies:
