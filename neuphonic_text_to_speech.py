@@ -2,7 +2,7 @@ from pyneuphonic import Neuphonic, TTSConfig
 from pyneuphonic.player import AudioPlayer
 import os
 
-api_key = "" # GET THIS FROM beta.neuphonic.com!!!!!!!!!
+api_key = "172c4d78863aec707d4496f0d5258bff3389e92b2614c8175e7f18575eebc4a5.f13b6de5-100a-4252-b2fd-7a4aa39c852f" # GET THIS FROM beta.neuphonic.com!!!!!!!!!
 
 client = Neuphonic(api_key=api_key)
 sse = client.tts.SSEClient()
