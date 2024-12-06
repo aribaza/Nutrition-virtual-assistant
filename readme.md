@@ -66,7 +66,7 @@ In what follows, we'll show you how to get started and use our software!
 
 You will need to be running a minimum of Python 3.10+ 
 
-You'll also need to get an API Key, which you can get from [beta.neuphonic.com](beta.neuphonic.com).
+You'll also need to get an API Key, which you can get from [beta.neuphonic.com](https://beta.neuphonic.com).
 
 
 ### MacOS
