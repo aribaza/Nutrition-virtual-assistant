@@ -68,4 +68,4 @@ def scrape_nutritional_info(item):
         driver.quit()
 
 # Example usage
-scrape_nutritional_info("Domio Bolognese")
+scrape_nutritional_info("Jaffa Cakes")
